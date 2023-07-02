@@ -3,6 +3,7 @@ package com.SpringRest.REST.repository;
 import com.SpringRest.REST.entity.Department;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
@@ -12,10 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest
 class DepartmentRepositoryTest {
 
-    @AutoWired
-    private  DepartmentRepository departmentRepository;
+    @Autowired
+    private DepartmentRepository departmentRepository;
 
-    @AutoWired
+    @Autowired
     private TestEntityManager entityManager;
     // to store the data in DB for mocking and then delete when the test is completed
 
